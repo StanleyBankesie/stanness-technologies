@@ -47,7 +47,7 @@ const StannessTech = () => {
         "Harvest prediction & yield analytics",
         "Mobile app for remote farm monitoring",
       ],
-      color: "from-blue-500 to-cyan-500",
+      // color: "from-blue-900 to-blue-900",
     },
     {
       name: "DoxaHub",
@@ -63,7 +63,7 @@ const StannessTech = () => {
         "Sermon library & media management",
         "Communication tools & notifications",
       ],
-      color: "from-purple-500 to-pink-500",
+      // color: "from-rose-900 to-rose-900",
     },
     {
       name: "EduCore",
@@ -79,7 +79,7 @@ const StannessTech = () => {
         "Fee management & billing",
         "Library & resource management",
       ],
-      color: "from-orange-500 to-red-500",
+      // color: "from-orange-700 to-orange-700",
     },
     {
       name: "AgroTrack",
@@ -94,7 +94,7 @@ const StannessTech = () => {
         "Financial management & profitability analysis",
         "Market price tracking & sales management",
       ],
-      color: "from-green-500 to-emerald-500",
+      // color: "from-green-700 to-green-700",
     },
   ];
 
@@ -143,10 +143,10 @@ const StannessTech = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#0E3646] to-[#7AA131] rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-linear-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
                 <Zap className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold" style={{ color: "#0E3646" }}>
+              <span className="text-2xl font-bold text-primary">
                 Stanness Technologies
               </span>
             </div>
@@ -157,22 +157,17 @@ const StannessTech = () => {
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="font-medium transition-colors hover:text-[#7AA131]"
-                  style={{
-                    color:
-                      activeSection === item.toLowerCase()
-                        ? "#7AA131"
-                        : "#0E3646",
-                  }}
+                  className={`font-medium transition-colors hover:text-secondary ${
+                    activeSection === item.toLowerCase()
+                      ? "text-secondary"
+                      : "text-primary"
+                  }`}
                   onClick={() => setActiveSection(item.toLowerCase())}
                 >
                   {item}
                 </a>
               ))}
-              <button
-                className="px-6 py-2 rounded-lg text-white font-medium transition-transform hover:scale-105"
-                style={{ backgroundColor: "#7AA131" }}
-              >
+              <button className="px-6 py-2 rounded-lg text-white font-medium transition-transform hover:scale-105 bg-secondary">
                 Get Started
               </button>
             </div>
@@ -183,9 +178,9 @@ const StannessTech = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
-                <X size={24} style={{ color: "#0E3646" }} />
+                <X size={24} className="text-primary" />
               ) : (
-                <Menu size={24} style={{ color: "#0E3646" }} />
+                <Menu size={24} className="text-primary" />
               )}
             </button>
           </div>
@@ -199,8 +194,7 @@ const StannessTech = () => {
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="block font-medium"
-                  style={{ color: "#0E3646" }}
+                  className="block font-medium text-primary"
                   onClick={() => {
                     setIsMenuOpen(false);
                     setActiveSection(item.toLowerCase());
@@ -209,10 +203,7 @@ const StannessTech = () => {
                   {item}
                 </a>
               ))}
-              <button
-                className="w-full px-6 py-2 rounded-lg text-white font-medium"
-                style={{ backgroundColor: "#7AA131" }}
-              >
+              <button className="w-full px-6 py-2 rounded-lg text-white font-medium bg-secondary">
                 Get Started
               </button>
             </div>
@@ -240,17 +231,11 @@ const StannessTech = () => {
                 cutting-edge technology.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button
-                  className="px-8 py-4 rounded-lg font-semibold flex items-center space-x-2 transition-transform hover:scale-105"
-                  style={{ backgroundColor: "#7AA131", color: "white" }}
-                >
+                <button className="px-8 py-4 rounded-lg font-semibold flex items-center space-x-2 transition-transform hover:scale-105 bg-secondary text-white hover:bg-secondary/90">
                   <span>Explore Solutions</span>
                   <ArrowRight size={20} />
                 </button>
-                <button
-                  className="px-8 py-4 bg-white rounded-lg font-semibold transition-transform hover:scale-105"
-                  style={{ color: "#0E3646" }}
-                >
+                <button className="px-8 py-4 bg-white rounded-lg font-semibold transition-transform hover:scale-105 text-primary hover:bg-gray-50">
                   Book a Demo
                 </button>
               </div>
@@ -271,10 +256,7 @@ const StannessTech = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div
-                    className="text-4xl md:text-5xl font-bold mb-2"
-                    style={{ color: "#0E3646" }}
-                  >
+                  <div className="text-4xl md:text-5xl font-bold mb-2 text-primary">
                     {stat.number}
                   </div>
                   <div className="text-gray-600 font-medium">{stat.label}</div>
@@ -289,10 +271,7 @@ const StannessTech = () => {
       <section id="products" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2
-              className="text-4xl md:text-5xl font-bold mb-4"
-              style={{ color: "#0E3646" }}
-            >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
               Our Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -309,22 +288,14 @@ const StannessTech = () => {
                   key={index}
                   className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow"
                 >
-                  <div
-                    className={`h-2 bg-gradient-to-r ${product.color}`}
-                  ></div>
+                  <div className={`h-2 bg-linear-to-r ${product.color}`}></div>
                   <div className="p-8">
                     <div className="flex items-center space-x-4 mb-6">
-                      <div
-                        className="w-16 h-16 rounded-xl flex items-center justify-center"
-                        style={{ backgroundColor: "#7AA131" }}
-                      >
+                      <div className="w-16 h-16 rounded-xl flex items-center justify-center bg-secondary">
                         <Icon size={32} className="text-white" />
                       </div>
                       <div>
-                        <h3
-                          className="text-2xl font-bold"
-                          style={{ color: "#0E3646" }}
-                        >
+                        <h3 className="text-2xl font-bold text-primary">
                           {product.name}
                         </h3>
                         <p className="text-gray-600">{product.category}</p>
@@ -342,17 +313,14 @@ const StannessTech = () => {
                         <div key={idx} className="flex items-start space-x-2">
                           <CheckCircle
                             size={20}
-                            className="flex-shrink-0 mt-0.5"
+                            className="shrink-0 mt-0.5"
                             style={{ color: "#7AA131" }}
                           />
                           <span className="text-gray-700">{feature}</span>
                         </div>
                       ))}
                     </div>
-                    <button
-                      className="mt-6 w-full py-3 rounded-lg font-semibold text-white transition-transform hover:scale-105"
-                      style={{ backgroundColor: "#0E3646" }}
-                    >
+                    <button className="mt-6 w-full py-3 rounded-lg font-semibold text-white transition-transform hover:scale-105 bg-primary hover:bg-primary/90">
                       Learn More
                     </button>
                   </div>
@@ -398,16 +366,10 @@ const StannessTech = () => {
                   key={index}
                   className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
                 >
-                  <div
-                    className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: "#7AA131" }}
-                  >
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center bg-secondary">
                     <Icon size={32} className="text-white" />
                   </div>
-                  <h3
-                    className="text-xl font-bold mb-3"
-                    style={{ color: "#0E3646" }}
-                  >
+                  <h3 className="text-xl font-bold mb-3 text-primary">
                     {item.title}
                   </h3>
                   <p className="text-gray-600">{item.desc}</p>
@@ -422,16 +384,16 @@ const StannessTech = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2
-              className="text-4xl md:text-5xl font-bold mb-4"
-              style={{ color: "#0E3646" }}
-            >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
               What Our Clients Say
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg">
+              <div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} size={20} fill="#7AA131" color="#7AA131" />
@@ -458,11 +420,7 @@ const StannessTech = () => {
       </section>
 
       {/* Contact Section */}
-      <section
-        id="contact"
-        className="py-20 px-4 sm:px-6 lg:px-8"
-        style={{ backgroundColor: "#0E3646" }}
-      >
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-primary">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-white">
@@ -476,11 +434,11 @@ const StannessTech = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <Mail size={24} style={{ color: "#7AA131" }} />
-                  <span>info@stanness.tech</span>
+                  <span>stannesstech@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Phone size={24} style={{ color: "#7AA131" }} />
-                  <span>+233 XX XXX XXXX</span>
+                  <span>+233248877123</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <MapPin size={24} style={{ color: "#7AA131" }} />
@@ -491,45 +449,35 @@ const StannessTech = () => {
             <div className="bg-white p-8 rounded-2xl shadow-2xl">
               <div className="space-y-6">
                 <div>
-                  <label
-                    className="block text-sm font-medium mb-2"
-                    style={{ color: "#0E3646" }}
-                  >
+                  <label className="block text-sm font-medium mb-2 text-primary">
                     Name
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7AA131]"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"
                   />
                 </div>
                 <div>
-                  <label
-                    className="block text-sm font-medium mb-2"
-                    style={{ color: "#0E3646" }}
-                  >
+                  <label className="block text-sm font-medium mb-2 text-primary">
                     Email
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7AA131]"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"
                   />
                 </div>
                 <div>
-                  <label
-                    className="block text-sm font-medium mb-2"
-                    style={{ color: "#0E3646" }}
-                  >
+                  <label className="block text-sm font-medium mb-2 text-primary">
                     Message
                   </label>
                   <textarea
                     rows="4"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7AA131]"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"
                   ></textarea>
                 </div>
                 <button
                   onClick={(e) => e.preventDefault()}
-                  className="w-full py-4 rounded-lg text-white font-semibold transition-transform hover:scale-105"
-                  style={{ backgroundColor: "#7AA131" }}
+                  className="w-full py-4 rounded-lg text-white font-semibold transition-transform hover:scale-105 bg-secondary hover:bg-secondary/90"
                 >
                   Send Message
                 </button>
@@ -542,7 +490,7 @@ const StannessTech = () => {
       {/* Footer */}
       <footer className="py-8 px-4 sm:px-6 lg:px-8 bg-[#0a2632] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <p>&copy; 2024 Stanness Technologies. All rights reserved.</p>
+          <p>&copy; 2025 Stanness Technologies. All rights reserved.</p>
         </div>
       </footer>
     </div>
